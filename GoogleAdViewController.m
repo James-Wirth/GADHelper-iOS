@@ -38,11 +38,12 @@
         
         adBanner_.delegate = self;
         adBanner_.rootViewController = rootViewController;
-        adBanner_.adUnitID = kAD_UNIT_ID;;
+        adBanner_.adUnitID = kAD_UNIT_ID;
         
         GADRequest *request = [GADRequest request];
         
-        request.testDevices = @[ kGADSimulatorID ];
+        //Uncomment if testing ad banner is necessary
+        //request.testDevices = @[ kGADSimulatorID ];
         [adBanner_ loadRequest:request];
         [rootViewController.view addSubview:adBanner_];
         isLoaded_ = YES;
