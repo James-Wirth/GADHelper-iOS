@@ -1,5 +1,8 @@
 # GADHelper-iOS
-## Usage ##
+## Implementing a shared GADBannerView  ##
+
+The following steps will enable the same ad banner to remain across all view controllers (without changing after every segue)
+
 1. Import the files 'GoogleAdViewController.h' and 'GoogleAdViewController.m' into your XCode project.
 
 2. Download the Google Mobile Ads SDK (https://developers.google.com/admob/ios/download) and import the framework into your project.
