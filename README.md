@@ -6,7 +6,7 @@
 
 3. In the view controllers where you want to display the ad banner, use:
 
-`GADMasterViewController *vc = [GADMasterViewController singleton];
-[vc resetAdView:self];`
+`GADMasterViewController *vc = [GADMasterViewController singleton];`
+`[vc resetAdView:self];`
 
 4. N.B. Remember to alter the AD UNIT ID at the top of the GoogleAdViewController.m to your ad unit id.
