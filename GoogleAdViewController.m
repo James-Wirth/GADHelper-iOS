@@ -18,12 +18,12 @@
 @implementation GoogleAdViewController
 
 
-+(GADMasterViewController *)singleton {
++(GoogleAdViewController *)singleton {
     static dispatch_once_t pred;
-    static GADMasterViewController *shared;
+    static GoogleAdViewController *shared;
 
     dispatch_once(&pred, ^{
-        shared = [[GADMasterViewController alloc] init];
+        shared = [[GoogleAdViewController alloc] init];
     });
     return shared;
 }
