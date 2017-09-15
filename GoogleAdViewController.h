@@ -17,7 +17,7 @@
 }
 
 -(void)resetAdView:(UIViewController *)rootViewController;
-+(GADMasterViewController *)singleton;
++(GoogleAdViewController *)singleton;
 }
 
 @end
