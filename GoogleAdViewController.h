@@ -11,8 +11,8 @@
 @import GoogleMobileAds;
 
 @interface GoogleAdViewController : UIViewController{
-    GADBannerView *adBanner_;
-    BOOL isLoaded_;
+    GADBannerView *ad_;
+    BOOL hasLoaded_;
     id currentDelegate_;
 }
 
