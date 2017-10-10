@@ -36,25 +36,24 @@
         [rootViewController.view addSubview:adBanner_];
     } else {
         
-        adBanner_.delegate = self;
-        adBanner_.rootViewController = rootViewController;
-        adBanner_.adUnitID = kAD_UNIT_ID;
+        ad_.delegate = self;
+        ad_.rootViewController = rootViewController;
+        ad_.adUnitID = kAD_UNIT_ID;
         
-        GADRequest *request = [GADRequest request];
-        
-        //Uncomment if testing ad banner is necessary
+        GADRequest *adRequest = [GADRequest request];
+       
         //request.testDevices = @[ kGADSimulatorID ];
-        [adBanner_ loadRequest:request];
-        [rootViewController.view addSubview:adBanner_];
-        isLoaded_ = YES;
+        [ad_ loadRequest:adRequest];
+        [rootViewController.view addSubview:ad_];
+        hasLoaded_ = YES;
     }
 }
 
 -(id)init {
     if (self = [super init]) {
-        adBanner_ = [[GADBannerView alloc]
+        ad_ = [[GADBannerView alloc]
                      initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height - 60, [[UIScreen mainScreen] bounds].size.width, 60)];
-        isLoaded_ = NO;
+        hasLoaded_ = NO;
     }
     return self;
 }
